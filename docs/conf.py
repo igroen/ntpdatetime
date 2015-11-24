@@ -16,8 +16,6 @@
 import os
 import sys
 
-import ntpdatetime
-
 # If extensions (or modules to document with autodoc) are in another
 # directory, add these directories to sys.path here. If the directory is
 # relative to the documentation root, use os.path.abspath to make it
@@ -32,7 +30,7 @@ project_root = os.path.dirname(cwd)
 # This lets us ensure that the source package is imported, and that its
 # version is used.
 sys.path.insert(0, project_root)
-
+import ntpdatetime  # noqa isort:skip
 
 # -- General configuration ---------------------------------------------
 
