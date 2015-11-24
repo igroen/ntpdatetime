@@ -31,6 +31,4 @@ class NTPDateTime(datetime):
         return cls.now()
 
 
-ntp_now = NTPDateTime.ntp_now
-
-# print(ntp_now().strftime('%d-%m-%Y %H:%M:%S'))
+now = NTPDateTime.ntp_now
