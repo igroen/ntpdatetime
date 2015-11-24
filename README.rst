@@ -13,7 +13,7 @@ NTPDateTime
         :alt: Documentation Status
 
 
-Extend datetime smodule so it can return the time fetched from a NTP server
+Extend datetime module so it can return the time fetched from a NTP server
 
 * Free software: ISC license
 * Documentation: https://ntpdatetime.readthedocs.org.

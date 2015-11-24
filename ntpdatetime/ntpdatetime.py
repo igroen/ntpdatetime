@@ -30,5 +30,5 @@ class NTPDateTime(datetime):
         # Just return the system time for now
         return cls.now()
 
-
+ntpdatetime = NTPDateTime
 now = NTPDateTime.ntp_now

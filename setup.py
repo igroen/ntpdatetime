@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 try:
     from setuptools import setup
 except ImportError:
@@ -19,7 +18,8 @@ requirements = [
 ]
 
 test_requirements = [
-    'ntplib'
+    'mock',
+    'coveralls'
 ]
 
 setup(
