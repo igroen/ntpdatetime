@@ -19,6 +19,7 @@ requirements = [
 
 test_requirements = [
     'mock',
+    'coverage',
     'coveralls'
 ]
 
