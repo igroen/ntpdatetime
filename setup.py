@@ -14,7 +14,8 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
 requirements = [
-    'ntplib'
+    'ntplib',
+    'coverage'
 ]
 
 test_requirements = [
