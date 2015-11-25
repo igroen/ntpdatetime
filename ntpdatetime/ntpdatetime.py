@@ -1,21 +1,17 @@
 # -*- coding: utf-8 -*-
+import config
 from datetime import datetime
 
 import ntplib
 
 
 class NTPDateTime(datetime):
-    _poolservers = (
-        'nl.pool.ntp.org',
-        'europe.pool.ntp.org',
-        'pool.ntp.org',
-    )
 
     @classmethod
     def ntp_now(cls):
         """Returns a datatime object based on the time
            received from an NTP server"""
-        for poolserver in cls._poolservers:
+        for poolserver in config.poolservers:
             try:
                 response = ntplib.NTPClient().request(
                     poolserver,
