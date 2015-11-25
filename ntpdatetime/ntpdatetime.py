@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
-import config
+from __future__ import absolute_import
+
 from datetime import datetime
 
 import ntplib
+
+from . import config
 
 
 class NTPDateTime(datetime):

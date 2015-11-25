@@ -7,7 +7,6 @@ test_ntpdatetime
 
 Tests for `ntpdatetime` module.
 """
-
 import unittest
 from datetime import datetime
 
