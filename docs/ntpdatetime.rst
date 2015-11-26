@@ -4,6 +4,14 @@ ntpdatetime package
 Submodules
 ----------
 
+ntpdatetime.config module
+-------------------------
+
+.. automodule:: ntpdatetime.config
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 ntpdatetime.ntpdatetime module
 ------------------------------
 
