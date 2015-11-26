@@ -15,7 +15,8 @@ NTPDateTime
 .. image:: https://coveralls.io/repos/igroen/ntpdatetime/badge.svg?branch=master&service=github
         :target: https://coveralls.io/github/igroen/ntpdatetime?branch=master
 
-Extend datetime module so it can return the time fetched from a NTP server
+
+Extend datetime module so it can return the time fetched from an NTP server
 
 * Free software: ISC license
 * Documentation: https://ntpdatetime.readthedocs.org.
