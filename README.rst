@@ -12,6 +12,8 @@ NTPDateTime
         :target: https://readthedocs.org/projects/ntpdatetime/?badge=latest
         :alt: Documentation Status
 
+.. image:: https://coveralls.io/repos/igroen/ntpdatetime/badge.svg?branch=master&service=github
+        :target: https://coveralls.io/github/igroen/ntpdatetime?branch=master
 
 Extend datetime module so it can return the time fetched from a NTP server
 
