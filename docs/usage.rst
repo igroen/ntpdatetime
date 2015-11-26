@@ -6,4 +6,4 @@ To use NTPDateTime in a project::
 
     from ntpdatetime import now
 
-    print(now().strftime('%d-%m-%Y %H:%M:%S'))
+    print(now()[0].strftime('%d-%m-%Y %H:%M:%S'))

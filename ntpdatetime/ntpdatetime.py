@@ -21,13 +21,13 @@ class NTPDateTime(datetime):
                     version=3,
                     timeout=2
                 )
-                return cls.fromtimestamp(response.tx_time)
+                return cls.fromtimestamp(response.tx_time), True
             except:
                 continue
 
         # No poolservers supplied or no resposne from poolservers
         # Just return the system time for now
-        return cls.now()
+        return cls.now(), False
 
 ntpdatetime = NTPDateTime
 now = NTPDateTime.ntp_now
