@@ -16,3 +16,9 @@ History
 
     True  # Time was fetched from an NTP server
     False  # Error occurred when connection to an NTP poolserver. System datetime is returned
+
+
+0.1.2 (2015-11-27)
+------------------
+
+* Patch for release on pypi. Old version (0.1.1) was removed and cannot be released again.
