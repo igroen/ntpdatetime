@@ -1,6 +1,6 @@
-===============================
+===========
 NTPDateTime
-===============================
+===========
 
 .. image:: https://img.shields.io/pypi/v/ntpdatetime.svg
         :target: https://pypi.python.org/pypi/ntpdatetime
@@ -27,7 +27,7 @@ Features
 * TODO
 
 Credits
----------
+-------
 
 Tools used in rendering this package:
 
