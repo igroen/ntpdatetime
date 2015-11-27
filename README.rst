@@ -31,8 +31,8 @@ Credits
 
 Tools used in rendering this package:
 
-*  Cookiecutter_
+*  `Cookiecutter`_
 *  `cookiecutter-pypackage`_
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _cookiecutter-pypackage: https://github.com/audreyr/cookiecutter-pypackage
