@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
 
+import socket
 from datetime import datetime
 
 import ntplib
@@ -22,7 +23,7 @@ class NTPDateTime(datetime):
                     timeout=2
                 )
                 return cls.fromtimestamp(response.tx_time), True
-            except:
+            except (ntplib.NTPException, socket.gaierror):
                 continue
 
         # No poolservers supplied or no resposne from poolservers
