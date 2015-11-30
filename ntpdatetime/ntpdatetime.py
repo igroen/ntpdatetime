@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
 
-import socket
 from datetime import datetime
+from socket import gaierror
 
-import ntplib
+from ntplib import NTPClient, NTPException
 
-from . import config
+from .config import poolservers
 
 
 class NTPDateTime(datetime):
@@ -15,15 +15,15 @@ class NTPDateTime(datetime):
     def ntp_now(cls):
         """Returns a datatime object based on the time
            received from an NTP server"""
-        for poolserver in config.poolservers:
+        for poolserver in poolservers:
             try:
-                response = ntplib.NTPClient().request(
+                response = NTPClient().request(
                     poolserver,
                     version=3,
                     timeout=2
                 )
                 return cls.fromtimestamp(response.tx_time), True
-            except (ntplib.NTPException, socket.gaierror):
+            except (NTPException, gaierror):
                 continue
 
         # No poolservers supplied or no resposne from poolservers
