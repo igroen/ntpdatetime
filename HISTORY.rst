@@ -22,3 +22,9 @@ History
 ------------------
 
 * Patch for release on pypi. Old version (0.1.1) was removed and cannot be released again.
+
+
+0.1.3 (2015-12-01)
+------------------
+
+* Update unittests
