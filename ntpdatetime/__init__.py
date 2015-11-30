@@ -5,4 +5,4 @@ from .ntpdatetime import *  # noqa
 
 __author__ = 'Iwan in \'t Groen'
 __email__ = 'iwanintgroen@gmail.com'
-__version__ = '0.1.2'
+__version__ = '0.1.3'
