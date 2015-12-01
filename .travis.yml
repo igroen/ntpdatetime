@@ -17,9 +17,12 @@ env:
   - TOXENV=py26
   - TOXENV=pypy
 install:
-  - pip install -U tox
-  - pip install coveralls
+  - pip install -U tox --use-mirrors
+  - pip install -U coveralls --use-mirrors
+  - pip install -U flake8 --use-mirrors
 language: python
+before_script:
+  - flake8 ntpdatetime
 script:
   - tox
   - coverage run --source=ntpdatetime setup.py test
