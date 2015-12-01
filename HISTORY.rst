@@ -35,3 +35,10 @@ History
 
 * Mock all request
 * Update docstrings
+
+
+0.1.5 (2015-12-02)
+------------------
+
+* Add flake8 test to travis configuration
+* Update development settings in requirements_dev.txt
