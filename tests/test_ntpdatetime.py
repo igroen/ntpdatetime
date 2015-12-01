@@ -11,16 +11,10 @@ import unittest
 from datetime import datetime
 from socket import gaierror
 
-from mock import Mock, patch
+from mock import patch
 from ntplib import NTPClient, NTPException, NTPStats
 
 from ntpdatetime import config, now, ntpdatetime
-
-ntp_exception_mock = Mock()
-ntp_exception_mock.side_effect = NTPException
-
-socket_gaierror_mock = Mock()
-socket_gaierror_mock.side_effect = gaierror
 
 
 class TestNtpdatetime(unittest.TestCase):
@@ -34,18 +28,20 @@ class TestNtpdatetime(unittest.TestCase):
         self.assertTrue(fetched)  # Fetched from NTP server
         self.assertTrue(isinstance(ntp_now, datetime))
 
-    @patch.object(NTPClient, 'request', ntp_exception_mock)
-    def test_ntp_exception(self):
+    @patch.object(NTPClient, 'request')
+    def test_ntp_exception(self, mock):
+        mock.side_effect = NTPException
         ntp_now, fetched = now()
-        self.assertEqual(ntp_exception_mock.call_count,
+        self.assertEqual(mock.call_count,
                          self.poolservers)
         self.assertFalse(fetched)  # Not fetched from NTP server
         self.assertTrue(isinstance(ntp_now, datetime))
 
-    @patch.object(NTPClient, 'request', socket_gaierror_mock)
-    def test_gai_error(self):
+    @patch.object(NTPClient, 'request')
+    def test_gai_error(self, mock):
+        mock.side_effect = gaierror
         ntp_now, fetched = now()
-        self.assertEqual(socket_gaierror_mock.call_count,
+        self.assertEqual(mock.call_count,
                          self.poolservers)
         self.assertFalse(fetched)  # Not fetched from NTP server
         self.assertTrue(isinstance(ntp_now, datetime))
