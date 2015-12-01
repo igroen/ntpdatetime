@@ -24,7 +24,7 @@ Extend datetime module so it can return the time fetched from an NTP server
 Features
 --------
 
-* TODO
+* Get the current time fetched from an NTP poolserver
 
 Credits
 -------

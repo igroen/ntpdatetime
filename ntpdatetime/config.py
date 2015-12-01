@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-'''Hardcoded tuple of poolservers'''
+'''Tuple of poolservers'''
 
 poolservers = (
     'nl.pool.ntp.org',

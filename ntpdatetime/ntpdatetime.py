@@ -10,11 +10,15 @@ from .config import poolservers
 
 
 class NTPDateTime(datetime):
+    """Extends the datetime module to add a custom method
+    """
 
     @classmethod
     def ntp_now(cls):
-        """Returns a datatime object based on the time
-           received from an NTP server"""
+        """Returns a tuple containing a datatime object based on the time
+           received from an NTP poolserver and a boolean value depending on
+           whether it was fetched from a poolserver or not
+        """
         for poolserver in poolservers:
             try:
                 response = NTPClient().request(
