@@ -24,7 +24,7 @@ test_requirements = [
 
 setup(
     name='ntpdatetime',
-    version='0.1.3',
+    version='0.1.4',
     description="Extend datetime module so it can return the time fetched from a NTP server",
     long_description=readme + '\n\n' + history,
     author="Iwan in 't Groen",
