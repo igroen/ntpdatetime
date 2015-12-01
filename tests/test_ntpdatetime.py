@@ -12,7 +12,7 @@ from datetime import datetime
 from socket import gaierror
 
 from mock import Mock, patch
-from ntplib import NTPClient, NTPException
+from ntplib import NTPClient, NTPException, NTPStats
 
 from ntpdatetime import config, now, ntpdatetime
 
@@ -25,9 +25,11 @@ socket_gaierror_mock.side_effect = gaierror
 
 class TestNtpdatetime(unittest.TestCase):
 
-    def test_instance(self):
+    @patch.object(NTPClient, 'request')
+    def test_instance(self, mock):
         ntp_dt = ntpdatetime(2002, 12, 25)
         self.assertTrue(isinstance(ntp_dt, datetime))
+        mock.return_value = NTPStats()
         ntp_now, fetched = now()
         self.assertTrue(fetched)  # Fetched from NTP server
         self.assertTrue(isinstance(ntp_now, datetime))
