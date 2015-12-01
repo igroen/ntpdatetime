@@ -28,3 +28,10 @@ History
 ------------------
 
 * Update unittests
+
+
+0.1.4 (2015-12-01)
+------------------
+
+* Mock all request
+* Update docstrings
