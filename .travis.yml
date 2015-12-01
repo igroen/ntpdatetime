@@ -22,7 +22,7 @@ install:
   - pip install -U flake8 --use-mirrors
 language: python
 before_script:
-  - flake8 ntpdatetime
+  - flake8 ntpdatetime -v
 script:
   - tox
   - coverage run --source=ntpdatetime setup.py test
