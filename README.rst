@@ -15,6 +15,9 @@ NTPDateTime
 .. image:: https://coveralls.io/repos/igroen/ntpdatetime/badge.svg?branch=master&service=github
         :target: https://coveralls.io/github/igroen/ntpdatetime?branch=master
 
+.. image:: https://requires.io/github/igroen/homebrew/requirements.svg?branch=master
+        :target: https://requires.io/github/igroen/homebrew/requirements/?branch=master
+        :alt: Requirements Status
 
 Extend datetime module so it can return the time fetched from an NTP server
 
