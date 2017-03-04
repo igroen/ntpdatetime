@@ -42,3 +42,8 @@ History
 
 * Add flake8 test to travis configuration
 * Update development settings in requirements_dev.txt
+
+0.1.6 (2017-03-04)
+------------------
+
+- Remove requirements_dev.txt
