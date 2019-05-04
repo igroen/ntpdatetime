@@ -30,7 +30,7 @@ class NTPDateTime(datetime):
             except (NTPException, gaierror):
                 continue
 
-        # No poolservers supplied or no resposne from poolservers
+        # No poolservers supplied or no response from poolservers
         # Just return the system time for now
         return cls.now(), False
 
