@@ -47,3 +47,9 @@ History
 ------------------
 
 - Remove requirements_dev.txt
+
+0.1.7 (2019-05-04)
+------------------
+
+- Fixed typo in comment
+- Update travis build to use python3.7
